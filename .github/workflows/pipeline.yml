@@ -59,6 +59,12 @@ jobs:
           name: model-info
           path: model_info.txt
 
+      - name: Upload mlruns artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mlruns-data
+          path: mlruns
+
   deploy:
     name: deploy
     runs-on: ubuntu-latest
@@ -76,6 +82,12 @@ jobs:
         with:
           name: model-info
           path: .
+
+      - name: Download mlruns artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mlruns-data
+          path: mlruns
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v5

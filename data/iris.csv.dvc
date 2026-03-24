@@ -1,5 +1,3 @@
 outs:
 - path: iris.csv
-  md5: demo-placeholder-md5
-  size: 0
-  hash: md5
+

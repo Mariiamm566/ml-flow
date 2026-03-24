@@ -48,7 +48,6 @@ jobs:
             echo "run_id.txt not found"
             exit 1
           fi
-
           cat run_id.txt > model_info.txt
           echo "Created model_info.txt with Run ID: $(cat model_info.txt)"
 
